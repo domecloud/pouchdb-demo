@@ -1,7 +1,7 @@
 ; (function () {
   'use strict'
 
-//  var dbuser = new PouchDB('http://xxxxxx:xxxxxx@localhost:5984/users')
+  //var dbuser = new PouchDB('http://xxx:xxxxxx@localhost:5984/users')
   var dbuser = new PouchDB('users')
   PouchDB.debug.enable('pouchdb:find');
   /*
@@ -38,6 +38,7 @@
     $('#txt-role').append('<option id="' + role.Id + '" value="' + role.Id + '">' + role.Name + '</option>')
   })
   function refreshUsers(filter) {
+    $('#jsGrid').jsGrid('loadData');
     /*
     dbuser.allDocs({
       include_docs: true,
